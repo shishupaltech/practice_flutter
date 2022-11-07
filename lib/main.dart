@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter_practice/function_in_dart.dart';
-import 'package:flutter_practice/home_page.dart';
+import 'package:flutter_practice/pages/home_page.dart';
+import 'package:flutter_practice/pages/login_page.dart';
 
 void main()
 {
@@ -10,14 +11,30 @@ void main()
 }
 
 class myApp extends StatelessWidget {
-  const myApp({ Key? key }) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
     
 
     return MaterialApp(
-      home:HomePage(),
+      
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+      primarySwatch: Colors.deepOrange),
+      darkTheme: ThemeData( 
+        brightness: Brightness.dark
+      ),
+      initialRoute: "/home",
+      routes:{
+        "/":(context)=>LoginPage(),
+        "/home":(context)=>HomePage(),
+        "/login":(context)=>LoginPage(),
+      } ,
+      
+
     );
   }
+
+  
 }
