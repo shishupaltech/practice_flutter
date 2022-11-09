@@ -16,9 +16,20 @@ class HomeDetailsPage extends StatelessWidget {
       body: SafeArea(
         child: Column(children: [ 
           Hero(tag: Key(catalog.id.toString()), child:
-          Image.network(catalog.image),),
+          Image.network(catalog.image),
+          ).h32(context),
+          Expanded(
+            child:VxArc(
+              height: 30.0,
+              arcType:VxArcType.CONVEY,
+              edge: VxEdge.TOP,
+              child:Container(  
+                color: Colors.red,
+              ),
+            )
+          ),
         ]
-        ).p16(),
+        ),
       ),
     );
   }
