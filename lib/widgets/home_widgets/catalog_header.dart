@@ -9,7 +9,7 @@ import '../../widgets/themes.dart';class CatalogHeader extends StatelessWidget {
     return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [ 
-              "Catelog APP".text.xl5.bold.color(MyTheme.darkBluishColor).make(),
+              "Catelog APP".text.xl5.bold.color(context.theme.accentColor).make(),
               "Trending products".text.xl2.make(),
             ],
           );
